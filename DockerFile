@@ -1,0 +1,55 @@
+
+
+Docker files are used to automate the docker container automation
+
+# FROM
+FROM ubuntu
+
+# ADD - used to add files inside a container (Eg: add html command in container)
+ADD . /var/www/html
+
+# RUN to start the services or run any command at the start of a container
+
+RUN apt-get update
+
+# CMD used to execute commands during the execution of container
+
+# ENTRYPOINT 
+
+# ENV
+
+To create a docker file call like 'nano dockerfile'
+
+mkdir dockerFiles
+
+vi dockerfile
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install apache2
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+ENV name Sreejith49
+
+vi testDockerFile.html
+
+This file is created to test the docker file module
+
+#docker commands without sudo
+sudo usermod -aG docker $USER
+relogin the putty session
+
+docker build . -t dockerfile
+
+docker run -it -p 84:80 -d dockerfile
+
+http://192.168.0.8:84/testDockerFile.html 
+
+Resume with docker volumes: 1:20
+https://www.youtube.com/watch?v=RppfZGuLsmA
+
+
+
+
+
+
