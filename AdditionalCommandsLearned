@@ -1,0 +1,7 @@
+docker run -it -p 82:80 -d sreejith49/apache
+
+-p will tag the contained port 80 to the host port82
+if you browser the host ip:82, apache main page gets display
+
+-d means deamon, which means that it runs in background
+
