@@ -5,3 +5,11 @@ if you browser the host ip:82, apache main page gets display
 
 -d means deamon, which means that it runs in background
 
+
+Commit & Push docker container to docker hub
+
+docker commit ca9ed7388d0b sreejith49/apache
+
+docker push sreejith49/apache
+
+
